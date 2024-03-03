@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  #dropzone {
+    border: 2px dashed #bbb;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  #dropzone.highlight {
+    background-color: #e6f7ff;
+  }
+  
+  #thumbnail {
+    width: 200px;
+    height: auto;
+    margin: 20px auto;
+  }
+  
+  #name {
+    margin-bottom: 10px;
+  }
+  
+  #submit {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #submit:hover {
+    background-color: #0069d9;
+  }
+  
+  #loading {
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+  }
+  
+  #result {
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #result h3 {
+    margin-top: 0;
+  }
+  
+  #result .success {
+    color: green;
+  }
+  
+  #result .failure {
+    color: red;
+  }
+
+  .pokemon_right {
+    padding-top: 40px;
+  }
+  

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Image Search</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- 引入 Font Awesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <!-- 引入自定義 CSS -->
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Video Search</h5>
+                        <img src="/static/images/vector_search.png" width='175px' height='175px'></img>
+                        <input type="text" name="query" class="form-control" placeholder="Type Query Here">
+                    </div>
+                </div>
+                <button type="button" id="image_search" class="btn btn-primary">Search</button>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Results</h5>
+                        <!-- <ul class="list-group" id="results"></ul> -->
+                        <div class="container align-items-center" id="results">
+                            <!-- <div class="row">
+                          <div class="col-md-4">
+                            <img src="your_image_url" alt="Image">
+                          </div>
+                          <div class="col-md-8">
+                            <h4>Name</h4>
+                            <p>Score: 90</p>
+                          </div>
+                        </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入 jQuery 和 Dropzone JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <!-- 引入自定義 JavaScript -->
+    <script src="static/main.js"></script>
+
+</body>
+
+</html>
