@@ -32,11 +32,48 @@ _Describe what you application does and how it works_
 
 # Demonstration Script
 
-_Demonstration script (or link to script) goes here_
+<!-- _Demonstration script (or link to script) goes here_
 
 _The demonstration script should provide all the information required for another MongoDB SA to deliver your demonstration to a prospect. This should include:_
 
 * _setup/installation steps_
 * _step by step instructions on how to give the demonstration_
 * _key points to emphasize at each point in the demonstration_
-* _any tear down steps required to reset the demonstration so it is ready for the next time_
+* _any tear down steps required to reset the demonstration so it is ready for the next time_ -->
+
+## Prerequisites
+
+### OS Environment Preparation
+
+- RHEL
+  
+  ```ssh
+  sudo yum install cmake
+  sudo yum install gcc-c++
+  ```
+
+- Mac M1
+  
+  ```ssh
+  brew install cmake
+  brew install libpng
+  ```
+
+### Application Preparation
+
+- Anaconda, <https://www.anaconda.com/>
+  
+- Install Python library by Anaconda
+  
+  ```sh
+  conda env create -f environment.yaml
+  ```
+
+### Start Application
+
+Activate Anaconda environment, start web service.
+
+```sh
+conda activate demo
+bin/start.sh
+```

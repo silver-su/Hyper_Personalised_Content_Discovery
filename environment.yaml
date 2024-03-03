@@ -1,4 +1,4 @@
-name: face_reco
+name: demo
 channels:
   - defaults
 dependencies:
@@ -101,4 +101,3 @@ dependencies:
     - zipp==3.15.0
     - zope-event==4.6
     - zope-interface==6.0
-prefix: /Users/brian/opt/anaconda3/envs/face_reco
