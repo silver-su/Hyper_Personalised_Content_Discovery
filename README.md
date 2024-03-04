@@ -7,7 +7,7 @@
 
 # Overview
 
-To revolutionize the OTT platform’s user experience by integrating Generative AI with MongoDB Atlas for advanced content search and personalized recommendations.
+This project serves as a groundbreaking demonstration of how Generative AI, integrated with MongoDB Atlas Developer Data Platform, can revolutionize the OTT platform user experience by enabling advanced content search and hyper-personalized recommendations.
 
 # Justification
 
