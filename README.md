@@ -21,10 +21,8 @@ Utilize MongoDB Atlas and its Developer Data Platform to manage and analyze esse
 
 # Detailed Application Overview
 
-_Describe the architecture of your application and include a diagram._
-_List all the MongoDB components/products used in your demonstration._
-_Describe what you application does and how it works_
-
+![Architecure Diagram]
+(/src/static/images/architecture.png)
 
 # Roles and Responsibilities
 
