@@ -21,8 +21,7 @@ Utilize MongoDB Atlas and its Developer Data Platform to manage and analyze esse
 
 # Detailed Application Overview
 
-![Architecure Diagram]
-(/src/static/images/architecture.png)
+![Architecure Diagram](src/static/images/architecture.png)
 
 # Roles and Responsibilities
 
