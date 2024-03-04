@@ -7,14 +7,16 @@
 
 # Overview
 
-To revolutionize the OTT platform’s user experience by integrating Generative AI with MongoDB Atlas for advanced content search and personalized recommendations.
+This project serves as a groundbreaking demonstration of how Generative AI, integrated with MongoDB Atlas Developer Data Platform, can revolutionize the OTT platform user experience by enabling advanced content search and hyper-personalized recommendations.
 
 # Justification
 
 ## Current State
+
 Existing OTT platform use traditional approach to recommendation such as machine learning model. Leverage Generative AI to improve recommendation engine, make it more personalization.
 
 ## Solution
+
 Utilize MongoDB Atlas and its Developer Data Platform to manage and analyze essential data types, such as raw content metadata, user search history, user digital footprints, and browsing behavior. Implement Generative AI to use this data for creating dynamic keywords and hyper-personalized content recommendations.
 
 # Detailed Application Overview
