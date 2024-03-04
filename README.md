@@ -3,7 +3,7 @@
 **Project** : Hyper-personalised Content Discovery  
 **Team Number** : _insert team number here_  
 **Team Name** : Cathlon Lau, Steven Guo, Silver Su  
-**Demonstration Video** : _Insert link to demonstration video_  
+**Demonstration Video** : <https://drive.google.com/file/d/1wNleg6WoDnxHY9_H-5qoj2V6QGJ_B_FF/view>  
 
 # Overview
 
@@ -12,7 +12,7 @@ To revolutionize the OTT platform’s user experience by integrating Generative 
 # Justification
 
 ## Current State
-Existing OTT platform use tranditional approach to recommendation such as machine learning model. Leverage Generative AI to improve recommendation engine, make it more personalization.
+Existing OTT platform use traditional approach to recommendation such as machine learning model. Leverage Generative AI to improve recommendation engine, make it more personalization.
 
 ## Solution
 Utilize MongoDB Atlas and its Developer Data Platform to manage and analyze essential data types, such as raw content metadata, user search history, user digital footprints, and browsing behavior. Implement Generative AI to use this data for creating dynamic keywords and hyper-personalized content recommendations.
@@ -69,11 +69,82 @@ _The demonstration script should provide all the information required for anothe
   conda env create -f environment.yaml
   ```
 
-### Start Application
+## Data Preparation
 
-Activate Anaconda environment, start web service.
+### Atlas Cluster Information
+
+> Create your own Atlas cluster, input connection string into *src/config.py*, change the value of **MDB_URL** in *src/config.py*
+
+### Import Sample Data
+
+- Image Search for movie star
+  
+  There are some of sample movie star picture in *src/static/movie_star*. If you would like to add new picture, filename is the name of movie star and content will be the facial image.
+
+  Execute importer program.
+
+  ```sh
+  conda activate demo
+  python src/movie_star_importer.py
+  ```
+
+- Text to Image Search for food
+  
+  There are some of sample food picture in *src/static/food*. If you would like to add new picture, filename is the name of food and content will be the food image.
+
+  Execute importer program.
+
+  ```sh
+  conda activate demo
+  python src/food_importer.py
+  ```
+
+### Create Vector Index
+
+- Image Search for movie star
+  
+  Create Vector Index named **faces** in Atlas UI with following specification.
+
+  ```json
+  {
+    "fields": [
+      {
+        "numDimensions": 128,
+        "path": "embeddings",
+        "similarity": "euclidean",
+        "type": "vector"
+      }
+    ]
+  }
+  ```
+
+- Text to Image Search for food
+  
+  Create Vector Index named **food_idx** in Atlas UI with following specification.
+
+  ```json
+  {
+    "fields": [
+      {
+        "numDimensions": 512,
+        "path": "embeddings",
+        "similarity": "euclidean",
+        "type": "vector"
+      }
+    ]
+  }
+  ```
+
+## Launch Application
+
+Activate Anaconda environment, start web service and listen on 8000 port.
 
 ```sh
 conda activate demo
 bin/start.sh
 ```
+
+Once application started, you could access following URL to test it.
+
+- <http://[IP]:8000> for Image Search for movie star
+- <http://[IP]:8000/food> for Text to Image Search for food
